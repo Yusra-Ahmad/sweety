@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+  background-color: #eeeded;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  line-height: 1.8;
+}
+
+header {
+  background-color: white;
+  padding: 2rem;
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  gap: 10px;
+}
+
+.desktop-menu li {
+  display: none;
+}
+
+.mobile-menu li {
+  list-style-type: none;
+  background-color: #eeeded;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.mobile-menu li:hover {
+  color: white;
+  background-color: crimson;
+}
+
+span {
+  color: hotpink;
+  font-weight: bolder;
+}
+
+.hero {
+  background-image: url(../images/sweetBg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 14rem 1rem;
+  /* height: 45vh ; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hero div {
+  width: 90%;
+}
+
+.hero div p {
+  font-size: 1.5rem;
+  margin-block: 2rem;
+}
+
+h1 {
+  font-family: "Pacifico";
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  margin-block: 1rem;
+}
+
+.card {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.card div {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddf5eb;
+  padding: 2.4rem;
+  flex-grow: 1;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.card img {
+  width: 150px;
+}
+
+button {
+  background-color: hotpink;
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+}
+
+@media (min-width: 992px) {
+  .mobile-menu li:first-child {
+    display: none;
+  }
+  .desktop-menu li {
+    display: flex;
+    list-style: none;
+    font-size: 1.8rem;
+    margin: 0 2rem;
+  }
+  a {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .desktop-menu a:hover {
+    border-bottom: 2px solid red;
+  }
+
+  nav {
+    justify-content: space-around;
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+  .card {
+    width: 80%;
+    margin: auto;
+  }
+}

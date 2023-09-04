@@ -1,0 +1,35 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "This is a boilerplate",
+  "scripts": {
+    "start": "run-p watch watch:styles",
+    "build": "run-s clean clean:styles build:styles copy",
+    "build-parcel": "rm -rf dist && parcel build src/index.html --dist-dir dist --public-url ./",
+    "deploy": "run-s build publish",
+    "build:styles": "sass src/scss:src/styles",
+    "watch": "live-server src",
+    "watch:styles": "sass src/scss:src/styles --watch",
+    "clean": "rm -rf dist",
+    "clean:styles": "rm -rf src/styles",
+    "copy": "mkdir dist && rsync -avr --exclude=\"/scss\" src/ dist",
+    "publish": "gh-pages -d dist"
+  },
+  "author": "dci",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "gh-pages": "^4.0.0",
+    "live-server": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.9.3",
+    "sass": "^1.66.1"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.2.0"
+  },
+
+  "homepage": "https://Yusra-Ahmad.github.io/sweety"
+
+}
